@@ -1,12 +1,11 @@
-Blue Button Sample Client Application - Rails Version
-======================================================
+# Blue Button Sample Client Application - Rails Version
 
 ## Introduction
 
 This client demonstrates authenticating to the [Blue Button API](https://bluebutton.cms.gov/) and subsequent FHIR API calls.
 It demonstrates the OAuth2 Server Side web application flow where a `client_secret` is used.
 
-This client is built using the [Ruby on Rails](https://rubyonrails.org/) web application framework. 
+This client is built using the [Ruby on Rails](https://rubyonrails.org/) web application framework.
 
 The ['oauth2'](https://rubygems.org/gems/oauth2/versions/1.2.0) Ruby Gem is used for OAuth 2.0 client methods.
 
@@ -14,16 +13,16 @@ The ['oauth2'](https://rubygems.org/gems/oauth2/versions/1.2.0) Ruby Gem is used
 
 ## Status and Contributing
 
-This demo app is still a work in progress! 
+This demo app is still a work in progress!
 
 The goal of this demo is to provide examples of the technical interaction with the [Blue Button API](https://bluebutton.cms.gov/).
 
 The application is in active development so check back often for updates.
-Please consider improving this code with your contributions. Pull requests welcome ;) 
+Please consider improving this code with your contributions. Pull requests welcome ;)
 
 ## Prerequisite [Docker](https://www.docker.com/) Software Requirement
 
-This demo utilizes [docker-compose](https://docs.docker.com/compose/) with the goal of being compatible with different platforms and operating systems. 
+This demo utilizes [docker-compose](https://docs.docker.com/compose/) with the goal of being compatible with different platforms and operating systems.
 
 Please follow the information at the following link for installation instructions: https://docs.docker.com/compose/install/
 
@@ -37,16 +36,16 @@ On RedHat this would be:
 
 If you are using a Windows operating system, you will need to setup port-forwarding for [Docker](https://www.docker.com/) virtual machine running under [VirtualBox](https://www.virtualbox.org/). This will enable you to access it via localhost.
 
-  1. Open the VirtualBox manager.
-  2. Select the Docker VM image (default)
-  3. Open settings -> network -> advanced -> port forwarding
-  4. Add a new forwarded port with Name = "BB-Rails", Host_IP = "127.0.0.1", Host_Port = "3000", and Guest_Port = "3000".
-  5. Double-click the "Docker Quickstart terminal" on your desktop. This will startup needed components and give you a command shell for later commands in this README.
+1. Open the VirtualBox manager.
+2. Select the Docker VM image (default)
+3. Open settings -> network -> advanced -> port forwarding
+4. Add a new forwarded port with Name = "BB-Rails", Host_IP = "127.0.0.1", Host_Port = "3000", and Guest_Port = "3000".
+5. Double-click the "Docker Quickstart terminal" on your desktop. This will startup needed components and give you a command shell for later commands in this README.
 
 ## Clone the Repository
 
     git clone https://github.com/CMSgov/bluebutton-sample-client-rails.git
-    cd bluebutton-sample-client-rails 
+    cd bluebutton-sample-client-rails
 
 ## Setting Up a Sandbox Application
 
@@ -77,11 +76,10 @@ Run the following commands to copy the sample configuration file:
     cp config/local_env_sample.yml config/local_env.yml
 
 Edit the local_env.yml file and update the following entries in the development section with your
-application's client id and secret: 
+application's client id and secret:
 
     BB_CLIENT_ID: "<enter client id here>"
     BB_CLIENT_SECRET: "<enter client secret here>"
-
 
 ## Startup the [Rails](https://rubyonrails.org/) application server with in a [Docker](https://www.docker.com/) container.
 
@@ -97,15 +95,13 @@ Any time you want to start the [Rails](https://rubyonrails.org/) server containe
 
     docker-compose up
 
-
 Any time you want to gracefully stop the [Rails](https://rubyonrails.org/) server container use the following command:
 
     docker-compose down
-    
+
 ### Final Step
 
 To use and test the demo application you can navigate to http://localhost:3000 in your web browser.
-
 
 ## This README and demo app is still a work in progress :-)
 
@@ -113,5 +109,4 @@ This README and demo app is still in progress! More to come :-)
 
 NOTES:
 Docker manual login - docker login <username not email>
-
-https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=h4oyJLFbQufTePfrDeWMmD8V1LAoszQdUBVvYwq3&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fbluebutton%2Fcallback&response_type=code&state=76766a88cfb934bed0d14ab485ce06d4
+Make sure to be logged out of the Developer Portal
