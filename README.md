@@ -110,3 +110,8 @@ To use and test the demo application you can navigate to http://localhost:3000 i
 ## This README and demo app is still a work in progress :-)
 
 This README and demo app is still in progress! More to come :-)
+
+NOTES:
+Docker manual login - docker login <username not email>
+
+https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=h4oyJLFbQufTePfrDeWMmD8V1LAoszQdUBVvYwq3&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fbluebutton%2Fcallback&response_type=code&state=76766a88cfb934bed0d14ab485ce06d4
