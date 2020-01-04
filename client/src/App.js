@@ -5,14 +5,14 @@
 import Button from "@cmsgov/design-system-core/dist/components/Button/Button";
 import React from "react";
 import "@cmsgov/design-system-core/dist/index.css";
-
+import "./App.css"
 function App() {
   return (
-    <div className="ds-base ds-u-padding--2">
+    <div className="map-image">
     
-        <p className="ds-c-alert__text">
+        
           You did it! You&rsquo;ve ran the example.
-        </p>
+       
         <Button className="ds-u-margin-top--2">Learn more</Button>
 
     </div>

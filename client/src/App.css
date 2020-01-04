@@ -1,0 +1,5 @@
+/*  */
+.map-image {
+  background: url("/./map.png") no-repeat center center;
+  height: 95vh;
+}
