@@ -9,8 +9,16 @@ Bundler.require(*Rails.groups)
 module Code
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.2
+    #https://github.com/cyu/rack-cors
+    #config.middleware.insert_before 0, Rack::Cors do
+    #  allow do
+    #    origins '*'
+    #    resource '*', headers: :any, methods: [:get, :post, :options]
+    #  end
+    #end
 
+    config.load_defaults 5.2
+   
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
