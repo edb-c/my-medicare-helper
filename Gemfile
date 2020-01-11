@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '~> 2.5.1'
+ruby '~> 2.6.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -71,3 +71,4 @@ gem "loofah", ">= 2.2.3"
 gem "nokogiri", ">= 1.10.2"
 gem "rack", ">= 2.0.7"
 gem "railties", ">= 5.2.3"
+gem 'rack-cors', '~> 0.4.0'
