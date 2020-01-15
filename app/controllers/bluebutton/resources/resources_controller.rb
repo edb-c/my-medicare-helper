@@ -8,7 +8,7 @@ class Bluebutton::Resources::ResourcesController < ApplicationController
 
   def userinfo
     resource_title('User Info')
-    @bb_response = @bluebutton_oauth_service.get_resource('/v1/connect/userinfo.json')
+    @bb_response = @bluebutton_oauth_service.get_resource('/v1/connect/userinfo')
     #render('result')
     respond_to do |format|
       format.html {render :result} 

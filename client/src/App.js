@@ -12,7 +12,7 @@ import Button from "@cmsgov/design-system-core/dist/components/Button/Button";
 
 import "@cmsgov/design-system-core/dist/index.css";
 import "./App.css";
-//import UserInfo from "./UserInfo";
+import UserInfo from "./UserInfo";
 
 function App() {
   // Similar to componentDidMount and componentDidUpdate:
@@ -22,8 +22,8 @@ function App() {
 //      "http://localhost:3000/bluebutton/resources/userinfo.json"
 //    ).then(response => response.json());
 
-// fetch("http://localhost:3000/bluebutton/resources/userinfo.json"
-fetch("http://localhost:3000/eateries"
+ fetch('http://localhost:3000/bluebutton/resources/userinfo') /*
+
      , {
       method: "GET", // *GET, POST, PUT, DELETE, etc.
       //body: JSON.stringify(response), // must match "Content-Type" header
@@ -31,15 +31,16 @@ fetch("http://localhost:3000/eateries"
       credentials: "same-origin", // include, same-origin, *omit
       headers: {
           // "user-agent": "Mozilla/4.0 MDN Example",
-          //"Content-Type": "application/json"
-          "Content-Type": "text/plain"
+          "Content-Type": "application/json"
+         // "Content-Type": "text/plain"
           // "Content-Type": "text/plain",
       },
       
       mode: "no-cors", // no-cors, cors, *same-origin
       redirect: "follow", // manual, *follow, error
-      referrer: "no-referrer", // *client, no-referrer
+      referrer: "client", // *client, no-referrer
   })
+  */
   .then(response => response.text()) // parses response to JSON
 //  .then(json => {
 //      // json
@@ -102,7 +103,7 @@ fetch("http://localhost:3000/eateries"
               <tr>
                 <th scope="row">Detailed information for patient</th>
                 <td>
-                  <a href="http://localhost:3000/bluebutton/resources/patient">
+                  <a href="http://localhost:3000/bluebutton/resources/patient.json">
                     Patient
                   </a>
                 </td>
